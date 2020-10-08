@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Weather</string>
     <string name="city">You city</string>
+    <string name="search">Search</string>
+    <string name="weatherNow">Weather now</string>
+    <string name="weatherImage">TODO</string>
+    <string name="clock">Clock</string>
+    <string name="temp">Temperature</string>
+    <string name="dayOfWeek">Day of Week</string>
 </resources>
