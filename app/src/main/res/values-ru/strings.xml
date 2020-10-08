@@ -8,4 +8,8 @@
     <string name="clock">Время</string>
     <string name="temp">Температура</string>
     <string name="dayOfWeek">День недели</string>
+    <string name="barnaul">Барнаул</string>
+    <string name="sochi">Сочи</string>
+    <string name="moscow">Москва</string>
+
 </resources>

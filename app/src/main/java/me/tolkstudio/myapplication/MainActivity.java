@@ -1,16 +1,74 @@
 package me.tolkstudio.myapplication;
 
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button buttonBarnaul = findViewById(R.id.buttonBarnaul);
+        buttonBarnaul.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Погода в Барнауле", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        Button buttonMoscow = findViewById(R.id.buttonMoscow);
+        buttonMoscow.setOnClickListener(this);
+
+        Button buttonSochi = findViewById(R.id.buttonSochi);
+        buttonSochi.setOnClickListener(this);
+
+        Button buttonCity = findViewById(R.id.buttonCity);
+        buttonCity.setOnClickListener(this);
+
+        Button btnAct2 = findViewById(R.id.btn_Act2);
+        btnAct2.setOnClickListener(this);
+
     }
 
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.buttonMoscow:
+                Toast.makeText(this, "Погода в москве", Toast.LENGTH_SHORT).show();
+                return;
 
+            case R.id.buttonSochi:
+                Toast.makeText(this, "Погода в Сочи", Toast.LENGTH_SHORT).show();
+                return;
+
+            case R.id.buttonCity:
+                new AlertDialog.Builder(MainActivity.this)
+                        .setMessage("В дальнейшем при нажатии на эту кнопку будет показана погода в вашем городе")
+                        .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                dialogInterface.dismiss();
+                            }
+                        })
+                        .create()
+                        .show();
+                return;
+
+            case R.id.btn_Act2:
+                Intent intent = new Intent(this,ActivityTwo.class);
+                startActivity(intent);
+                break;
+
+
+        }
+    }
 }
