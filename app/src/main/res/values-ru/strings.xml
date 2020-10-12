@@ -11,5 +11,6 @@
     <string name="barnaul">Барнаул</string>
     <string name="sochi">Сочи</string>
     <string name="moscow">Москва</string>
+    <string name="backToAct1">Вернуться к первой активити</string>
 
 </resources>
