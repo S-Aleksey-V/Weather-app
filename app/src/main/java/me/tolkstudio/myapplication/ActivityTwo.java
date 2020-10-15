@@ -1,5 +1,6 @@
 package me.tolkstudio.myapplication;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,14 +10,27 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ActivityTwo extends AppCompatActivity {
+public class ActivityTwo extends AppCompatActivity implements Constants {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_two);
 
+        Parcel parcel = (Parcel) getIntent().getExtras().getSerializable(TEXT);
+
+        TextView editCitiAct2 = findViewById(R.id.editCityAct2);
+        EditText tempAct2 = findViewById(R.id.tempAct2);
+
+        editCitiAct2.setText(parcel.text);
+        tempAct2.setText(String.valueOf(parcel.number));
+
         Button backToAct1 = findViewById(R.id.backToAct1);
         backToAct1.setOnClickListener(view -> {
+
+            EditText editTemp = findViewById(R.id.tempAct2);
+            Intent intentResult = new Intent();
+            intentResult.putExtra(NUMBER_RESULT,editTemp.getText().toString());
+            setResult(RESULT_OK,intentResult);
             Toast.makeText(ActivityTwo.this, "Вернулись на первую активити", Toast.LENGTH_SHORT).show();
             finish();
             Log.d("ActivitiTwo","finish");
