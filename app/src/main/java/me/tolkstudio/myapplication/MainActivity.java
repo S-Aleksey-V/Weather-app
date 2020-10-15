@@ -154,7 +154,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent moscowWeather = new Intent(Intent.ACTION_VIEW);
                 moscowWeather.setData(Uri.parse("https://yandex.ru/pogoda/moscow"));
                 startActivity(moscowWeather);
-//
+
                 return;
 
             case R.id.buttonSochi:
