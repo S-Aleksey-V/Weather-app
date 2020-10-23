@@ -5,7 +5,7 @@
     <string name="weatherNow">Weather now</string>
     <string name="weatherImage">TODO</string>
     <string name="clock">Clock</string>
-    <string name="temp">Temperature</string>
+    <string name="temp">average temperature + 15</string>
     <string name="dayOfWeek">Day of Week</string>
     <string name="barnaul">Barnaul</string>
     <string name="sochi">Sochi</string>
