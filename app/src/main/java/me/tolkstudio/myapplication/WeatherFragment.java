@@ -42,9 +42,9 @@ public class WeatherFragment extends Fragment {
         Button button = (Button) layout.findViewById(R.id.button);
 
         button.setOnClickListener(view -> {
-            Intent barnaulWeather = new Intent(Intent.ACTION_VIEW);
-            barnaulWeather.setData(Uri.parse("https://yandex.ru/pogoda"));
-            startActivity(barnaulWeather);
+            Intent weatherNow = new Intent(Intent.ACTION_VIEW);
+            weatherNow.setData(Uri.parse("https://yandex.ru/pogoda"));
+            startActivity(weatherNow);
         });
 
         TypedArray imgs = getResources().obtainTypedArray(R.array.cities_img);
@@ -62,4 +62,5 @@ public class WeatherFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
     }
+
 }

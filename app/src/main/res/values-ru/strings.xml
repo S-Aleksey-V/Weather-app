@@ -12,6 +12,7 @@
     <string name="sochi">Сочи</string>
     <string name="moscow">Москва</string>
     <string name="backToAct1">Вернуться к первой активити</string>
+    <string name="weather_for_a_week">погода на неделю</string>
 
 
 </resources>
