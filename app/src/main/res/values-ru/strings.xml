@@ -13,6 +13,11 @@
     <string name="moscow">Москва</string>
     <string name="backToAct1">Вернуться к первой активити</string>
     <string name="weather_for_a_week">погода на неделю</string>
+    <string name="refresh">Обновить</string>
+    <string name="temperature">Температура</string>
+    <string name="pressure">Давление</string>
+    <string name="humidity">Влажность</string>
+    <string name="wind_speed">Скорость ветра</string>
 
 
 </resources>

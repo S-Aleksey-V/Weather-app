@@ -89,11 +89,11 @@ public class CitiesFragment extends Fragment {
             }
         } else {
 
-            getFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.fragment_container, WeatherFragment.create(parcel))
-                    .addToBackStack(null)
-                    .commit();
+//            getFragmentManager()
+//                    .beginTransaction()
+//                    .replace(R.id.fragment_container, WeatherFragment.create(parcel))
+//                    .addToBackStack(null)
+//                    .commit();
         }
     }
 }
