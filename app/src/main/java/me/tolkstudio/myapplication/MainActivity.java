@@ -28,8 +28,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "WEATHER";
-//    private static final String WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather?lat=55.75&lon=37.62&appid=";
-//    private static final String WEATHER_API_KEY = "5ea0669790b6434af3783265536e77a4";
+
 
     private EditText city;
     private EditText temperature;
